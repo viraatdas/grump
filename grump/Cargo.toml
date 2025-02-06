@@ -1,0 +1,20 @@
+[package]
+name = "grump"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# For parsing source code
+nom = "7.1" 
+
+# For emitting WebAssembly
+wasm-encoder = "0.22"
+
+# Pretty printing for debugging
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[profile.release]
+lto = true
